@@ -29,7 +29,7 @@ function Downbar() {
                 </ul>
                     <ul className="flex space-x-3 ml-96">
                         <li>
-                            List your Show<sup className="text-red-600 text-ellipsis text-xs  md:hidden justify-start hidden">NEW</sup>
+                            List your Show<sup className="text-red-600 text-ellipsis text-xs  ">NEW</sup>
                         </li>
                         <li>
                             Corporates
