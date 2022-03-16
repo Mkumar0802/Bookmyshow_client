@@ -2,23 +2,22 @@ import React from "react";
 import 'flowbite';
 import {useState} from "react"
 // import { Link } from "react-router-dom";
-
+import Downbar from "./Downbar";
 
 function Navbar() {
 
     let [open,setOpen]=useState(false);
     return (
 
-
-        <div className="bg-cyan-900 p-5 flex" >
-
+        <div>
+        <div className=" w-full bg-slate-700 p-5 flex " >
             <div className="ml-14">
                 <h1 className="text-white text-xl font-mono" >
                     Book<span className="text-red-600">my</span>show
                 </h1>
             </div>
 
-            <div>
+            <div className="md:block sm:hidden">
                 <div class="flex  flex-col justify-center ml-5">
                     <div class="mb-3 xl:w-96">
                         <div class="input-group relative flex  items-stretch w-full mb-4">
@@ -33,13 +32,13 @@ function Navbar() {
                 </div>
             </div>
 
-<div className="ml-auto  text-white md:text-lg">
+<div className=" ml-auto  text-white md:text-lg  sm:hidden md:block  ">
     <button className=" rounded-md px-4 py-1  bg-red-600 hover:bg-red-700 ">Sign in </button>
     
 </div>
-<div className="ml-auto md:hidden text-white md:text-lg">
+<div className="sm:block md:hidden  ml-auto  text-white md:text-lg">
     
-    <button className=" rounded-md px-4 py-1  bg-red-600 hover:bg-red-700 ">Use App </button>
+    <button className=" md:hidden   rounded-md px-4 py-1  bg-red-600 hover:bg-red-700 ">Use App </button>
 </div>
 
       <div className="text-white">
@@ -49,6 +48,10 @@ function Navbar() {
       
  
       </div>
+      
+    </div>
+    
+<Downbar/>
     </div>
   
     )
