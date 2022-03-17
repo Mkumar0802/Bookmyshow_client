@@ -1,44 +1,46 @@
+import { Link,Outlet } from "react-router-dom";
+
 
 function Downbar() {
 
     return (
-        <div className=" w-auto bg-slate-800  pl-20 text-white sm:hidden   md:hidden sm:hidden lg:block justify-start hidden">
+        <div className=" w-auto bg-slate-800  pl-20 text-white    md:hidden sm:hidden lg:block justify-start hidden">
             <div className="flex">
                 <ul className="flex  space-x-3">
                     <li>
-                        Movies
+                    <Link to="/movies">Movies</Link>
                     </li>
                     <li>
-                        Stream<sup className="text-red-600 text-ellipsis text-xs">NEW</sup>
+                    <Link to="/stream">Stream<sup className="text-red-600 text-ellipsis text-xs">NEW</sup></Link>       
                     </li>
                     <li>
-                        Events
+                    <Link to="/events"> Events</Link>    
                     </li>
                     <li>
-                        Plays
+                    <Link to="/plays">Plays</Link>       
                     </li>
                     <li>
-                        Sports
+                    <Link to="/sports">Sports</Link>           
                     </li>
                     <li>
-                        Activities
+                    <Link to="/activities">Activities</Link>             
                     </li>
                     <li>
-                        Buzz
+                    <Link to="/buzz">Buzz</Link>             
                     </li>
                 </ul>
                     <ul className="flex space-x-3 ml-96">
                         <li>
-                            List your Show<sup className="text-red-600 text-ellipsis text-xs  ">NEW</sup>
+                        <Link to="/listyourshow"> List your Show<sup className="text-red-600 text-ellipsis text-xs  ">NEW</sup></Link>                 
                         </li>
                         <li>
-                            Corporates
+                        <Link to="/corporates">Corporates</Link>              
                         </li>
                         <li>
-                            Offers
+                        <Link to="/offers">Offers</Link>                
                         </li>
                         <li>
-                            Gift Cards
+                        <Link to="/giftcards">Gift Cards</Link>                    
                         </li>
                     </ul>
                 

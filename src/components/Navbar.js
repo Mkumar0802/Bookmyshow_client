@@ -1,7 +1,7 @@
 import React from "react";
 import 'flowbite';
 import {useState} from "react"
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Downbar from "./Downbar";
 
 function Navbar() {
@@ -13,7 +13,7 @@ function Navbar() {
         <div className=" w-auto bg-slate-700 p-5 flex " >
             <div className="ml-14">
                 <h1 className="text-white text-xl font-mono" >
-                    Book<span className="text-red-600">my</span>show
+                <Link to="/">Book<span className="text-red-600">my</span>show</Link> 
                 </h1>
             </div>
 
