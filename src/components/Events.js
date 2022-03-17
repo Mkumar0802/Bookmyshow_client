@@ -23,13 +23,32 @@ const Events = () => {
         getData();
     }, []);
     return (
-        <div className="w-auto h-auto bg-slate-700 ">
-            
-            
-        </div>
-        
-      
-    );
-};
+        <div>
+            <h1 className=" text-xl   md:text-2xl font-bold">
+                Events
+            </h1>
+            <div className="w-auto h-auto bg-slate-700 ">
 
-export default Events;
+                {movieList.map((val) => {
+                    return (
+                        <div>
+                            <div class="container  grid-flow-row md:grid grid-cols-5 gap-10">
+                                <div class=" ">
+                                    <div class="">
+                                        <div class="  ">
+                                            <div class=""key={val.index} >
+                                                <img class=" " src={val.pic} alt=""/>
+                                            </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                                    )
+                    })}
+</div>
+</div>
+                            )
+}
+                            export default Events;
