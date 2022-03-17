@@ -38,7 +38,7 @@ function Imagesilder() {
   const startSlider = () => {
     slideInterval = setInterval(() => {
       handleOnNextClick();
-    }, 10000);
+    }, 5000);
   };
 
   const pauseSlider = () => {
