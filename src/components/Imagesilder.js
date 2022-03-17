@@ -58,7 +58,7 @@ function Imagesilder() {
   };
 
   return (
-    <div ref={slideRef} className="w-full select-none relative">
+    <div ref={slideRef} className="w-auto select-none relative">
       <div className="aspect-w-16 aspect-h-9">
         <img src={featuredProducts[currentIndex]} alt="" />
       </div>

@@ -5,7 +5,7 @@ import React from 'react'
 function Supportlinks({ alignment = 'start' }) {
     return (
         
-        <div className='bg-slate-700  text-white  p-5 md:block sm:hidden justify-center hidden'>
+        <div className='w-auto bg-slate-700  text-white  p-5 md:block sm:hidden justify-center hidden'>
             <div className={`flex  justify-center lg:justify-${alignment}`}>
                 <div className="justify-start hidden"></div>
                 <div className="justify-center hidden"></div>

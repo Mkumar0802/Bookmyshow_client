@@ -9,7 +9,7 @@ function Footer() {
             <div className="relative ">
                 <Partnerlink/>
                 <Supportlinks />
-                <div className="bg-slate-700 text-white      py-20 text-center ">
+                <div className="w-auto bg-slate-700 text-white      py-20 text-center ">
                     <h1 className="text-white text-xl font-mono " >
 
                         Book<span className="text-red-600">my</span>show

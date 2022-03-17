@@ -4,7 +4,7 @@ import React from 'react'
 
 function SocialLinks({ alignment = 'start' }) {
     return (
-        <div className='bg-slate-700 '>
+        <div className='w-auto bg-slate-700 '>
         <div className={`flex  justify-center lg:justify-${alignment}`}>
             <div className="justify-start hidden"></div>
             <div className="justify-center hidden"></div>

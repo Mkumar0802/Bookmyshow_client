@@ -10,7 +10,7 @@ function Navbar() {
     return (
 
         <div>
-        <div className=" w-full bg-slate-700 p-5 flex " >
+        <div className=" w-auto bg-slate-700 p-5 flex " >
             <div className="ml-14">
                 <h1 className="text-white text-xl font-mono" >
                     Book<span className="text-red-600">my</span>show
