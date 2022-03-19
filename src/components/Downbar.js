@@ -11,7 +11,7 @@ function Downbar() {
                     <Link to="/movies">Movies</Link>
                     </li>
                     <li>
-                    <Link to="/stream">Stream<sup className="text-red-600 text-ellipsis text-xs">NEW</sup></Link>       
+                    <Link to="/stream">Stream<span className="text-red-600 text-ellipsis text-xs align-super">NEW</span></Link>       
                     </li>
                     <li>
                     <Link to="/events"> Events</Link>    
@@ -31,10 +31,10 @@ function Downbar() {
                 </ul>
                     <ul className="flex space-x-3 ml-96">
                         <li>
-                        <Link to="/listyourshow"> List your Show<sup className="text-red-600 text-ellipsis text-xs  ">NEW</sup></Link>                 
+                        <Link to="/contact"> List your Show<sup className="text-red-600 text-ellipsis text-xs  ">NEW</sup></Link>                 
                         </li>
                         <li>
-                        <Link to="/corporates">Corporates</Link>              
+                        <Link to="/Coporate">Corporates</Link>              
                         </li>
                         <li>
                         <Link to="/offers">Offers</Link>                

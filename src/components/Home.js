@@ -1,7 +1,7 @@
 import React from 'react';
 // import Navbar from "./components/Navbar"
 // import Footer from "./components/Footer";
-import Movies from "./Movies"
+import Movies from "../Pages/Movies"
 import Imagesilder from "./Imagesilder"
 
 

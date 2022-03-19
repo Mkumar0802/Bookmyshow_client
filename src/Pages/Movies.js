@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Button from "./Button";
+import Button from "../components/Button";
 
 
 const Main = () => {
@@ -28,7 +28,7 @@ const Main = () => {
                 <h2 className="px-16 pt-5  text-xl   md:text-2xl font-bold text-white  ">Movies</h2>
             </div>
 
-            <div className=" pr-10  mx-10     grid-flow-row md:grid-cols-3 gap-5  lg:grid grid-cols-5  ">
+            <div className=" pr-10  mx-10   sm:grid-flow-grid-cols-2   md:grid-cols-3 gap-5      lg:grid grid-cols-5 ">
                 {movieList.map((val) => {
                     return (
                         <div className="p-1 mr-2  m-5  bg-white  rounded-lg  max-w-sm  sm:rounded-lg  " key={val.index}>

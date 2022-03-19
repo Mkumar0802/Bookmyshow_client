@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link,Outlet} from 'react-router-dom'
 
 
 function Supportlinks({ alignment = 'start' }) {
@@ -15,7 +15,8 @@ function Supportlinks({ alignment = 'start' }) {
     <h1 className='  '>
         List Your Show,event,activity or a great experience?Partner with us 
     </h1 >
-    <button className=' rounded-md px-4 py-1  bg-red-600 hover:bg-red-700 '>Contact</button>
+    <button className=' rounded-md px-4 py-1  bg-red-600 hover:bg-red-700 '> <Link to="/contact">Contact</Link></button>
+    <Outlet/>
     </div>
     </div>
     </div>
