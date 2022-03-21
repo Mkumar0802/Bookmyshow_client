@@ -124,7 +124,7 @@ function Corporate() {
                                 <textarea id="message"  name="message"   rows="4" placeholder="Your message" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white  border border-gray-400   font-semibold focus:border-cyan-500 focus:outline-none required:"/>
                                 </div>
                                   <div className=" md:pl-16 sm: pl-16    ">
-                                <button type="submit" value="Send" class=" bg-teal-700  text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-teal-800 transition ease-in-out duration-300">
+                                <button type="submit" value="Send" onClick={addRecord} class=" bg-teal-700  text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-teal-800 transition ease-in-out duration-300">
                                     Submit
                                 </button>
                                 </div>
