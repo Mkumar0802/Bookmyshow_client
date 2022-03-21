@@ -10,6 +10,10 @@ import Contact from './Pages/Contact';
 import Events  from './Pages/Events';
 import Sports from './Pages/Sports';
 import Coporate from './Pages/Corporate'
+import { Theatres } from './Pages/theater';
+import { Seats } from './Pages/Seat';
+import Bookdetails from './Pages/Bookdetails';
+import Payment from './Pages/Payment';
 
 function App() {
   return (
@@ -25,6 +29,11 @@ function App() {
           <Route path="events" element={<Events />} />
           <Route path="sports" element={<Sports />} />
           <Route path="Coporate" element={<Coporate/>} />
+          <Route path="book" element={<Theatres/>} />
+          <Route path="seats" element={<Seats/>} />
+          <Route path="confiramtion" element={<Bookdetails/>} />
+          <Route path="payment" element={<Payment/>} />
+
 
           <Route
             path="*"

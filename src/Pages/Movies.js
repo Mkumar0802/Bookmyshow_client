@@ -51,7 +51,7 @@ const Main = () => {
                                 </div>
                             </div>
 
-                            <Button />
+                            <Button title ="Book" />
 
                         </div>
 
