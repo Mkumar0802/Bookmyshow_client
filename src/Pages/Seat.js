@@ -119,7 +119,7 @@ export function Seats() {
             </div>
             <div className=''>
                 <div className='grid grid-cols-2 md:p-24 p-5  pb-5  space-x-10    '>
-                    <div className='   grid grid-cols-5 gap-5   '>
+                    <div className='   grid grid-cols-5 md:gap-5 gap-1 text-sm md:text-xl justify-center '>
 
                         <button onClick={() => setColor1(!color1)} className={`rounded-md   hover:bg-green-500     text-green-900  border border-green-500     ${color1 ? 'bg-green-500' : 'bg-white'} `}>1   </button>
                         <button onClick={() => setColor2(!color2)} className={`rounded-md   hover:bg-green-500  text-green-900  border border-green-500     ${color2 ? 'bg-green-500' : 'bg-white'} `}>2   </button>
@@ -175,7 +175,7 @@ export function Seats() {
                     </div>
 
 
-                    <div className='grid grid-cols-5 gap-5'>
+                    <div className='grid grid-cols-5  md:gap-5 gap-1 text-sm md:text-xl justify-center '>
 
                         <button onClick={() => setColor51(!color51)} className={`rounded-md  hover:bg-green-500  text-green-900  border border-green-500     ${color51 ? 'bg-green-500' : 'bg-white'} `}> 51  </button>
                         <button onClick={() => setColor52(!color52)} className={`rounded-md   hover:bg-green-500  text-green-900  border border-green-500     ${color52 ? 'bg-green-500' : 'bg-white'} `}> 52  </button>
