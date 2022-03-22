@@ -1,8 +1,22 @@
 import { Link, Outlet } from "react-router-dom";
-
+import Swal from 'sweetalert2';
 
 
 function Bookdetails() {
+
+
+    const addRecord = () => {
+
+       
+        Swal.fire({
+            icon: 'success',
+            title: 'Your Deatails has been Added !!!',
+            text: ' Kindly wait .',
+            showConfirmButton: false,
+            timer: 3000
+          })
+     }
+
 
     return (
         <div>
@@ -29,7 +43,7 @@ function Bookdetails() {
 
 
                     <div className="  justify-start   ">
-                        <button type="submit" value="Send" class=" bg-red-600  text-white font-bold px-4 py-1 rounded-lg mt-3 hover:bg-red-700 transition ease-in-out duration-300" ><Link to="/payment">PayNow</Link><Outlet />
+                        <button type="submit" value="Send" class=" bg-red-600  text-white font-bold px-4 py-1 rounded-lg mt-3 hover:bg-red-700 transition ease-in-out duration-300" onClick={addRecord}  ><Link to="/payment">PayNow</Link><Outlet />
 
                         </button>
                     </div>
