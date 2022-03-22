@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link,Outlet } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -35,10 +35,10 @@ function TheatreCard({ name, address }) {
                     <div>  <h1 className="align-text-bottom">{name} : {address} </h1></div>
                    
                     <div className="md:space-x-5   sm:space-y-5  sm:space-x-5">
-                        <button className="rounded-md px-4 py-1    text-green-500  border border-green-500 text-xs     md:text-xl "  > <Link to="/seats">10.00 AM</Link>    </button>
-                        <button className="rounded-md px-4 py-1   text-green-500  border border-green-500  text-xs    md:text-xl"   ><Link to="/seats">2.30 PM </Link></button>
-                        <button className="rounded-md px-4 py-1   text-green-500  border border-green-500   text-xs    md:text-xl "   ><Link to="/seats">6.00 PM</Link> </button>
-                        <button className="rounded-md px-4 py-1   text-green-500  border border-green-500   text-xs    md:text-xl"   ><Link to="/seats" > 10.00 PM</Link> </button>
+                        <button className="rounded-md px-4 py-1    text-green-500  border border-green-500 text-xs     md:text-xl "  > <Link to="/seats">10.00 AM</Link><Outlet/>     </button>
+                        <button className="rounded-md px-4 py-1   text-green-500  border border-green-500  text-xs    md:text-xl"   ><Link to="/seats">2.30 PM </Link><Outlet/> </button>
+                        <button className="rounded-md px-4 py-1   text-green-500  border border-green-500   text-xs    md:text-xl "   ><Link to="/seats">6.00 PM</Link><Outlet/>  </button>
+                        <button className="rounded-md px-4 py-1   text-green-500  border border-green-500   text-xs    md:text-xl"   ><Link to="/seats" > 10.00 PM</Link><Outlet/>  </button>
                     </div>
                 </div>
             </div>

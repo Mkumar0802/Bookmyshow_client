@@ -21,7 +21,7 @@ function Bookdetails() {
     return (
         <div>
             <div className="mx-auto w-max text-center py-16 ">
-                <h1 className="text-2xl font-semibold    ">
+                <h1 className=" text-xl  md:text-2xl font-semibold    ">
                     Booking confirmation Details
 
                 </h1>
