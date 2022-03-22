@@ -28,12 +28,12 @@ function Bookdetails() {
                 <form class="p-6 flex flex-col justify-center" >
                     <div class="flex flex-col">
                         <label for="name" class="hidden">Full Name</label>
-                        <input type="text" name="name" placeholder="Full Name" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white  border border-red-400   font-semibold focus:border-red-500   required:" />
+                        <input type="text" name="name" placeholder="Full Name" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white  border border-red-400   font-semibold focus:border-red-500   required" />
                     </div>
 
                     <div class="flex flex-col mt-2">
                         <label class="hidden">Email</label>
-                        <input type="email" name="email" placeholder="Email" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white  border border-red-400   font-semibold focus:border-red-500  required" />
+                        <input type="email" name="email" placeholder="Email" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white  border border-red-400   font-semibold focus:border-red-500  required:" />
                     </div>
 
                     <div class="flex flex-col mt-2">
