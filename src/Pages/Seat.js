@@ -107,11 +107,11 @@ export function Seats() {
 
     return (
         <div className='justify-center'>
-            <div className='flex   justify-center "w-4/12  '>
-                <button className='rounded-full text-white   justify-center  px-72 bg-red-600 '  >Screen</button>
+            <div className='flex   justify-center "w-full  '>
+                <button className='rounded-full text-white   justify-center  px-48 bg-red-600 '  >Screen</button>
             </div>
-            <div className='flex   justify-center "w-4/12 '>
-                <h3 className='   rounded-lg bg-slate-300 shadow-xl px-40 '>All the eyes are this way please</h3>
+            <div className='flex   justify-center "w-full '>
+                <h3 className='   rounded-lg bg-slate-300 shadow-xl px-36 justify-self-start '>All the eyes are this way please</h3>
             </div>
 
             <div className=''>
@@ -233,7 +233,7 @@ export function Seats() {
 
 
                 <div className='flex  justify-center  p-7'>
-                    <button className=' text-white rounded-md px-4 py-1 my  bg-red-600 hover:bg-red-700'><Link to="/confiramtion">PayNow</Link><Outlet /> </button>
+                    <button className=' text-white rounded-md px-4 py-1 my  bg-red-600 hover:bg-red-700'><Link to="/confiramtion">Next</Link><Outlet /> </button>
 
                 </div>
             </div>

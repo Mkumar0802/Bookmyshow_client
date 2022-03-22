@@ -16,7 +16,7 @@ export function Theatres(props) {
         <>
             <div className="bg-slate-500">
                 <div className="mx-auto w-max text-center py-10 ">
-                    <div className="text-3xl text-white" ><h2>THEATRES</h2></div>
+                    <div className=" text-xl   md:text-3xl  text-white" ><h2>THEATRES</h2></div>
                 </div>
                 <div>
                     {theatreList.map((theatre, index) => (<TheatreCard name={theatre.name} address={theatre.address} />))}
@@ -32,12 +32,13 @@ function TheatreCard({ name, address }) {
         <div className="bg-slate-200">
             <div className="">
                 <div className="px-20 p-5  border border-slate-800  flex space-x-10">
-                    <h1>{name} : {address} </h1>
+                    <div>  <h1 className="align-text-bottom">{name} : {address} </h1></div>
+                   
                     <div className="md:space-x-5   sm:space-y-5  sm:space-x-5">
-                        <button className="rounded-md px-4 py-1 my   text-green-500  border border-green-500 md:text-xl "  > <Link to="/seats">10.00 AM</Link>    </button>
-                        <button className="rounded-md px-4 py-1 my   text-green-500  border border-green-500  md:text-xl"   ><Link to="/seats">2.30 PM </Link></button>
-                        <button className="rounded-md px-4 py-1 my   text-green-500  border border-green-500 md:text-xl "   ><Link to="/seats">6.00 PM</Link> </button>
-                        <button className="rounded-md px-4 py-1 my   text-green-500  border border-green-500  md:text-xl"   ><Link to="/seats" > 10.00 PM</Link> </button>
+                        <button className="rounded-md px-4 py-1    text-green-500  border border-green-500 text-xs     md:text-xl "  > <Link to="/seats">10.00 AM</Link>    </button>
+                        <button className="rounded-md px-4 py-1   text-green-500  border border-green-500  text-xs    md:text-xl"   ><Link to="/seats">2.30 PM </Link></button>
+                        <button className="rounded-md px-4 py-1   text-green-500  border border-green-500   text-xs    md:text-xl "   ><Link to="/seats">6.00 PM</Link> </button>
+                        <button className="rounded-md px-4 py-1   text-green-500  border border-green-500   text-xs    md:text-xl"   ><Link to="/seats" > 10.00 PM</Link> </button>
                     </div>
                 </div>
             </div>
