@@ -14,7 +14,7 @@ export function Payment() {
             <div className="md:flex md:justify-center p-5  grid grid-rows-2 justify-center">
                 <form class="w-full max-w-lg">
                     <div class="flex flex-wrap mx-3 mb-6">
-                        <div class="w-2/4  px-3">
+                        <div class="w-3/4 md:w-2/4  px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-name">
                                 Name
                             </label>
@@ -32,7 +32,7 @@ export function Payment() {
                             <p class="text-gray-600 text-xs italic">Enter 16 digit Card number</p>
                         </div>
 
-                        <div class="w-1/4 md:w-1/4 px-3 mb-6 md:mb-0">
+                        <div class="w-2/4 md:w-1/4 px-3 mb-6 md:mb-0">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                                 CVV
                             </label>
@@ -40,7 +40,7 @@ export function Payment() {
                         </div>
                     </div>
                     <div class="flex  mx-3 mb-2 ">
-                        <div class="w-1/4 md:w-1/3 px-3 mb-6 md:mb-0">
+                        <div class="w-2/4 md:w-1/4 px-3 mb-6 md:mb-0">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
                                 Expire date
                             </label>
