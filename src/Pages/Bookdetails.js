@@ -10,8 +10,8 @@ function Bookdetails() {
        
         Swal.fire({
             icon: 'success',
-            title: 'Your Deatails has been Added !!!',
-            text: ' Kindly wait .',
+            title: 'After payment confiramation.Ticket have been send to your email id!!',
+            text: ' Kindly check your email after your Payement',
             showConfirmButton: false,
             timer: 3000
           })

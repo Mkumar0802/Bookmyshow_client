@@ -13,7 +13,7 @@ function Navbar() {
         <div className=" w-auto bg-slate-700 p-5 flex " >
             <div className="ml-14">
                 <h1 className="text-white text-xl font-mono" >
-                <Link to="/">Book<span className="bg-red-600 inset-x-5">my</span>show</Link> 
+                <Link to="/">Book<span className="bg-red-600 rounded-xl">my</span>show</Link> 
                 </h1>
             </div>
 

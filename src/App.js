@@ -14,6 +14,8 @@ import { Theatres } from './Pages/theater';
 import { Seats } from './Pages/Seat';
 import Bookdetails from './Pages/Bookdetails';
 import Payment from './Pages/Payment';
+import Confiramation  from './Pages/Ticket';
+
 
 function App() {
   return (
@@ -33,7 +35,9 @@ function App() {
           <Route path="seats" element={<Seats/>} />
           <Route path="confiramtion" element={<Bookdetails/>} />
           <Route path="payment" element={<Payment/>} />
+          <Route path="ticketconfirmation" element={<Confiramation/>} />
 
+          
 
           <Route
             path="*"

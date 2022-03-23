@@ -2,12 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 
 
 const featuredProducts = [
-    'https://assets-in.bmscdn.com/promotions/cms/creatives/1647424411315_spiderman.jpg',
+    'https://img.ticketnew.com/tn/offer_banner/batman/1920_400.jpg',
     'https://img.ticketnew.com/tn/offer_banner/postpaid/1920_400.jpg',
     'https://img.ticketnew.com/tn/offer_banner/ET/1920_400.jpg',
-    'https://img.ticketnew.com/tn/offer_banner/batman/1920_400.jpg',
-    'https://assets-in.bmscdn.com/promotions/cms/creatives/1647342223301_scream.jpg',
-    'https://assets-in.bmscdn.com/promotions/cms/creatives/1646309266995_spartanweb.jpg',
+    'https://img.ticketnew.com/tn/offer_banner/imax/1920_400.jpg',
+    'https://img.ticketnew.com/tn/offer_banner/the-kashmir-files/1920_400.jpg?v1',
     
       
 ]
