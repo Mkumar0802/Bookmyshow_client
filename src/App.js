@@ -26,10 +26,10 @@ function App() {
           <Route index element={<Home />} />
           {/* <Route path="/" element={<App />} /> */}
           <Route path="movies" element={<Movies />} />
-          <Route path="stream" element={<Stream />} />
+          {/* <Route path="stream" element={<Stream />} /> */}
           <Route path="contact" element={<Contact />} />
-          <Route path="events" element={<Events />} />
-          <Route path="sports" element={<Sports />} />
+          {/* <Route path="events" element={<Events />} />
+          <Route path="sports" element={<Sports />} /> */}
           <Route path="Coporate" element={<Coporate/>} />
           <Route path="book" element={<Theatres/>} />
           <Route path="seats" element={<Seats/>} />

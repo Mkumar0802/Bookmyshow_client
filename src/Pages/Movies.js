@@ -33,25 +33,28 @@ const Main = () => {
                     return (
                         <div className="p-1 mr-2  m-5  bg-white  rounded-lg  max-w-sm  sm:rounded-lg  " key={val.index}>
                             <img
-                                className=" object-cover rounded-xl md:w-full  md:h-80  h-5/6 w-full   "
+                                className=" object-cover rounded-xl md:w-full  md:h-4/6  h-5/6 w-full   "
                                 alt="Movies"
-                                src={val.pic}
+                                src={val.image}
                             ></img>
                             <div className="p-2">
                                 <p className="text-base md:text-lg font-bold  ">{val.name}</p>
+                                <p className="text-base md:text-lg font-bold  ">{val.screen}</p>
                                 <p className=" font-bold">
-                                    Certificate : {val.certificate}
+                                    {val.certificate}
                                 </p>
+                                <p className="text-base md:text-lg font-bold  "><ion-icon name="star-half"></ion-icon>{val.rating} </p>
+
                                 <p className="text-lg">
                                     {" "}
-                                    <span className="font-bold">  Language : </span> {val.language}
+                                    <span className="font-bold">  </span> {val.language}
                                 </p>
                                 <div className="">
 
                                 </div>
                             </div>
 
-                            <Button title ="Book" />
+                            <Button title="Book" />
 
                         </div>
 

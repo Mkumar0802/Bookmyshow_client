@@ -24,7 +24,7 @@ export function Payment() {
 
                     </div>
                     <div class="flex flex-wrap mx-3 mb-6">
-                        <div class="w-2/4  px-3">
+                        <div class="w-3/4 md:w-2/4   px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                                 Card Number
                             </label>
@@ -32,7 +32,7 @@ export function Payment() {
                             <p class="text-gray-600 text-xs italic">Enter 16 digit Card number</p>
                         </div>
 
-                        <div class="w-2/4 md:w-1/4 px-3 mb-6 md:mb-0">
+                        <div class="w-1/4 md:w-1/4 px-3 mb-6 md:mb-0">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                                 CVV
                             </label>
