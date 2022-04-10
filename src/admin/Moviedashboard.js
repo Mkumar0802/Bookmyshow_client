@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
