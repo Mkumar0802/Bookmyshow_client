@@ -42,6 +42,9 @@ function Downbar() {
                         <li>
                         <Link to="/giftcards">Gift Cards</Link>                    
                         </li>
+                        <li>
+                        <Link to="/dashboard">Dashboard</Link>                    
+                        </li>
                     </ul>
                 
             </div>

@@ -9,7 +9,7 @@ export function Theatres(props) {
     const [theatreList, setTheatreList] = useState([])
     //eslint-disable-next-line
     useEffect(async () => {
-        var response = await axios.get('https://bookmyshow-i.herokuapp.com/theatre/gettheatre');
+        var response = await axios.get('https://book-myshow-api.herokuapp.com/theatre/gettheatre');
         setTheatreList(response.data);
     }, [])
     return (
