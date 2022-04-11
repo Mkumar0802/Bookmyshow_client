@@ -10,7 +10,7 @@ const Main = () => {
     const getData = async () => {
         try {
             let { data: response } = await axios.get(
-                `http://localhost:3001/movie/getmovie`
+                `https://book-myshow-api.herokuapp.com/movie/getmovie`
             );
             setMovieList(response);
         } catch (err) {
