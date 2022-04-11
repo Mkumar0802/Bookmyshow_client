@@ -67,22 +67,23 @@ function Moviedashboard(props) {
 
     return (
         <>
-            <div class="bg-slate-500">
-                <div className="flex  p-8 space-x-12 justify-center">
-                    <h2 className="  text-xl   md:text-2xl font-bold text-white  "> Dashboard</h2>
+            <div class="bg-slate-600">
+            <div className="flex  p-8 space-x-12 ">
+                    <button className="text-xl   md:text-4xl font-bold text-white   whitespace-normal"><Link to="/dashboard"><ion-icon name="arrow-back-circle-outline"></ion-icon></Link> </button>
+                    <h2 className="  text-xl   md:text-2xl font-bold text-white"> Dashboard</h2>
 
                 </div>
                 <div className="flex justify-center  ">
-                    <button className=" text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:ring-slate-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 "><Link to="/movieadd"><svg xmlns="http://www.w3.org/2000/svg" class=" flex h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                    <button className=" text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:ring-slate-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 whitespace-pre-line "><Link to="/movieadd"><svg xmlns="http://www.w3.org/2000/svg" class=" flex h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z" />
-                    </svg>Add</Link> </button>
+                    </svg>Add Movie List</Link> </button>
                 </div>
             </div>
-            <div class="flex flex-col  p-5">
-                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                    <div class="inline-block py-2 min-w-full sm:px-6 lg:px-8">
+            <div class="flex flex-col  w-auto  p-4 my-3 ">
+                <div class="overflow-x-auto ">
+                    <div class="inline-block py-2 min-w-fit sm:px-6 lg:px-8">
                         <div class="overflow-hidden shadow-md sm:rounded-lg">
-                            <table class="min-w-full">
+                            <table class="w-auto">
                                 <thead class="bg-gray-100 ">
                                     <tr>
                                         <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase ">

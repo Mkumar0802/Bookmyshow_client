@@ -1,72 +1,115 @@
-import axios from "axios";
+// import axios from "axios";
 import React from "react";
 import { useEffect, useState } from 'react';
-import { Link, Outlet} from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 import Swal from 'sweetalert2';
 
 function Theatreedit() {
-	
+	const [users, setUser] = useState([]);
 	const [name, setName] = useState('');
-    const [address, setAddress] = useState('');
-	const [_id, setID] = useState(null);
-	const sendDataToAPI = () => {
+	const [address, setAddress] = useState('');
+	
+	const [_id, setId] = useState(null);
 
-		// if (!name || !age || !country || !email || !mobile) {
-		// 	return Swal.fire({
-		// 		icon: 'error',
-		// 		title: 'Error!',
-		// 		text: 'All fields are required.',
-		// 		showConfirmButton: true
-		// 	});
-		// }
-
-	var response =	axios.put(`https://book-myshow-api.herokuapp.com/theatre/savetheatre/${_id}`, {
-
-			name,
-			address
-		})
-    var setIDCopy= [...setID]
-        var index = setIDCopy.findindex(row =>row._id===_id);
-        setIDCopy[index]= response.data;
-        	
-			Swal.fire({
-				icon: 'success',
-				title: 'Updated!',
-				text: `data has been updated.`,
-				showConfirmButton: false,
-				timer: 1500
-				
-			});
-	}
 
 	useEffect(() => {
-		setID(localStorage.getItem('id'))
-		setName(localStorage.getItem('name'));
+		setName(localStorage.getItem('name'))
+		setId(localStorage.getItem('id'))
 		setAddress(localStorage.getItem('address'));
 		
-		
+
+
 	}, [])
 
+	function getUsers() {
+		fetch("https://book-myshow-api.herokuapp.com/theatre/gettheatre/").then((result) => {
+			result.json().then((resp) => {
+				console.warn(resp)
+				setUser(resp)
+				setId(resp[0].id)
+				setName(resp[0].name)
+				setAddress(resp[0].address)
+				
+			})
+		})
+	}
 
+
+	function selectUser() {
+		let item = users;
+		setId(item.id)
+		setName(item.name)
+		setAddress(item.address)
+		
+
+
+	}
+
+
+	function updateUser() {
+
+		if (!name || !address ) {
+		return Swal.fire({
+		  icon: 'error',
+		  title: 'Error!',
+		  text: 'All fields are required.',
+		  showConfirmButton: true
+		});
+	  }
+	let item = { name, address}
+	console.warn("item", item)
+	fetch(`https://book-myshow-api.herokuapp.com/theatre/updatetheatre/${_id}`, {
+		method: 'PATCH',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(item)
+	}).then((result) => {
+		result.json().then((resp) => {
+			console.warn(resp)
+			getUsers()
+		})
+	})
+
+	Swal.fire({
+		icon: 'success',
+		title: 'Updated!',
+		text: `${name}   data has been updated.`,
+		showConfirmButton: false,
+		timer: 1500
+
+	});
+
+}
 	return (
-		<div className=" bg-slate-200 p-24">
+		<div className=" bg-slate-500 ">
+			<div className="flex bg-slate-600  w-auto p-6 text-white ">
 
-			<form>
-				<div class="mb-6">
-					<label for="Name" class="block mb-2 text-sm font-medium  ">Name</label>
-					<input type="text" id="name" value={name}
-						onChange={(e) => setName(e.target.name)} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="name@flowbite.com" required />
-				</div>
-				<div class="mb-6">
-					<label for="address" class="block mb-2 text-sm font-medium  ">Address</label>
-					<input type="text" id="address" value={address} onChange={(e) => setAddress(e.target.address)} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " required />
-				</div>
-			
 
-				<button type="submit" onClick={sendDataToAPI} class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><Link to="/theatredashboard">Update</Link></button>
+				<button onClick={selectUser} className="text-xl   md:text-4xl font-bold    whitespace-nowrap  "><Link to="/theatredashboard"><ion-icon name="arrow-back-circle-outline"></ion-icon></Link> </button>
+				<div className="px-36  text-xl   md:text-3xl font-bold ">
+					<h1 className="">Edit theatre Details  </h1>
+				</div>
+			</div>
+
+
+			<form className="ml-36 py-12 text-white ">	
+			<div class="mb-6">
+						<label for="Name" class="block mb-2 text-sm font-medium  ">Name</label>
+						<input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-4/12 p-2.5 " required />
+					</div>
+					<div class="mb-6">
+						<label for="address" class="block mb-2 text-sm font-medium  ">Address</label>
+						<input type="text" id="address" value={address} onChange={(e) => setAddress(e.target.value)} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-4/12 p-2.5 " required />
+					</div>
+				
+
+
+				<button type="submit" onClick={updateUser} class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:ring-slate-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"><Link to="/theatredashboard">Update</Link></button>
 			</form>
-            <Outlet />
+			<Outlet />
 		</div>
 	)
 

@@ -7,6 +7,7 @@ const featuredProducts = [
     'https://img.ticketnew.com/tn/offer_banner/ET/1920_400.jpg',
     'https://img.ticketnew.com/tn/offer_banner/imax/1920_400.jpg',
     'https://img.ticketnew.com/tn/offer_banner/the-kashmir-files/1920_400.jpg?v1',
+    'https://img.ticketnew.com/tn/offer_banner/fantastic/1920_400.jpg',
     
       
 ]
