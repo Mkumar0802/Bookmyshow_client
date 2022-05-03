@@ -3,7 +3,7 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
 import Swal from 'sweetalert2';
-
+import { URLDevelopment } from "../Helper/Url";
 export function Movieadd() {
 
     const [name, setName] = useState('');
@@ -26,7 +26,7 @@ export function Movieadd() {
           }
 
 
-        axios.post(`https://book-myshow-api.herokuapp.com/movie/savemovie/`, {
+        axios.post(`${URLDevelopment}movie/savemovie/`, {
 
             name,
             image,

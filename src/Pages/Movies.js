@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Button from "../components/Button";
-
+import { URLDevelopment } from "../Helper/Url";
 
 const Main = () => {
     const [movieList, setMovieList] = useState([]);
@@ -10,7 +10,7 @@ const Main = () => {
     const getData = async () => {
         try {
             let { data: response } = await axios.get(
-                `https://book-myshow-api.herokuapp.com/movie/getmovie`
+                `${URLDevelopment}movie/getmovie`
             );
             setMovieList(response);
         } catch (err) {
