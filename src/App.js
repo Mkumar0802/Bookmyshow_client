@@ -32,7 +32,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route index element={<Home />} />
+          <Route index element={<Login />} />
           {/* <Route path="/" element={<App />} /> */}
           <Route path="movies" element={<Movies />} />
           {/* <Route path="stream" element={<Stream />} /> */}
