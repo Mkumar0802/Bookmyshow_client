@@ -22,8 +22,9 @@ import Moviedashboard from './admin/Moviedashboard'
 import Movieadd from './admin/Movieadd';
 import Theatreedit from './admin/Theatreedit';
 import Movieedit from './admin/Movieedit';
-
-
+import Login from './Pages/Login';
+import Registerpage from './Pages/Registerpage';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           {/* <Route path="events" element={<Events />} />
           <Route path="sports" element={<Sports />} /> */}
+          <Route path="home" element={<Home />} />
           <Route path="Coporate" element={<Coporate />} />
           <Route path="book" element={<Theatres />} />
           <Route path="seats" element={<Seats />} />
@@ -51,6 +53,8 @@ function App() {
           <Route path="movieadd" element={<Movieadd />} />
           <Route path="theatreedit" element={<Theatreedit/>} />
           <Route path="Movieedit" element={<Movieedit/>} />
+          <Route path="login" element={<Login/>}/>
+          <Route path="register" element={<Registerpage/>}/>
 
           <Route
             path="*"
