@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Loading from "../utilltes/Loading";
 import ValidationError from "../utilltes/error";
 import { register } from "../features/userAction";
-import { toast } from 'react-toastify';
+
 
 
 
@@ -26,7 +26,6 @@ function Registerpage() {
     
     useEffect(() => {
         if (userInfo) {
-            toast.success(`welcome ${userInfo.name}`);
             navigate('/home')
         }
     }, [navigate, userInfo]);
@@ -35,7 +34,7 @@ function Registerpage() {
         e.preventDefault();
 
         if (password !== confirmpassword) {
-            toast.warning("Passwords do not match")
+           
             setMessage("Passwords do not match");
         } else dispatch(register(name, email, password,));
     };
@@ -43,9 +42,9 @@ function Registerpage() {
 
 
     return (
-        <div className=" text-white">
+        <div className="">
             <div className="flex justify-center p-10  ">
-                <h1 className="text-xl font-semibold text-white  animate-rubberBand">Register</h1>
+                <h1 className="text-xl font-semibold   animate-rubberBand">Register</h1>
 
             </div>
             <div>

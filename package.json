@@ -9,6 +9,8 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "animate.css": "^4.1.1",
+    "animated-tailwindcss": "^3.2.7",
     "axios": "^0.26.1",
     "flowbite": "^1.4.5",
     "flowbite-react": "0.0.23",

@@ -22,18 +22,19 @@ function Navbar() {
     useEffect(() => { }, [userInfo]);
     return (
 
-        <div>
-            <div className=" w-auto bg-slate-700 p-5 flex " >
-                <div className="ml-14">
+        <div className='shadow-md w-full relative top-0 left-0  '>
+        <div className='md:flex items-center justify-between bg-slate-900   py-4 md:px-10 px-7'>
+          <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
+        '>
+           <div className="ml-14">
                     <h1 className="text-white text-xl font-mono" >
                         <Link to="/">Book<span className="bg-red-600 rounded-xl">my</span>show</Link>
                     </h1>
                 </div>
-
                 <div className="md:hidden sm:hidden lg:block justify-start hidden">
-                    <div class="flex  flex-col justify-center ml-5">
-                        <div class="mb-3 w-96">
-                            <div class="input-group relative flex  items-stretch w-full mb-4">
+                    <div class="flex  flex-col justify-center ml-5 ">
+                        <div class="mt-3 w-96">
+                            <div class="input-group relative flex  items-stretch w-full mb-4 ">
                                 <input type="search" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-500-600 focus:outline-none" placeholder="Search for Movies,Events,Plays,Sports and Activities" aria-label="Search" aria-describedby="button-addon2" />
                                 <button class="btn  px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-900  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-500-800 active:shadow-lg transition duration-150 ease-in-out flex items-center" type="button" id="button-addon2">
                                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -44,59 +45,61 @@ function Navbar() {
                         </div>
                     </div>
                 </div>
-
-                <div className="text-white">
-                    <div onClick={() => setOpen(!open)} className='text-3xl absolute left-8 top-5 cursor-pointer '>
-                        <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
-                    </div>
-
-
-                </div>
-
-                {/* <div className=" ml-auto  text-white md:text-lg  sm:hidden md:block justify-start hidden ">
-                    <Link to="/">       <button className=" rounded-md px-4 py-1  bg-red-600 hover:bg-red-700 ">Sign in </button></Link>
-
-                </div> */}
-                {/* <div className="sm:block md:hidden  ml-auto  text-white md:text-lg">
-
-                    <button className=" md:hidden   rounded-md px-4 py-1  bg-red-600 hover:bg-red-700 ">Use App </button>
-                </div> */}
-
-
-                <Nav  variant="light">
-                    {userInfo ? (
-                        <>  <div className="md:ml-80 md:px-72">
-                            <div className=" rounded-md sm:px-1   px-4 py-1    bg-red-600 hover:bg-red-700">
-
-
-                                <NavDropdown
-                                    title={`${userInfo.name}`}
-                                    id="collasible-nav-dropdown"
-                                >
-                                    <NavDropdown.Item href="/profile">
-
-                                        My Profile
-                                    </NavDropdown.Item>
-
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item onClick={logoutHandler}>
-                                        Logout
-                                    </NavDropdown.Item>
-                                </NavDropdown>
-                            </div>
-                        </div>
-                        </>
-                    ) : (
-                        <div className="md:ml-80 md:px-72 text-white md:text-lg  sm:hidden md:block  ">
-                            <button className="rounded-md sm:px-1   px-4 py-1    bg-red-600 hover:bg-red-700 ">   <Nav.Link href="/login">Login</Nav.Link></button>
-                        </div>
-
-                    )}
-                </Nav>
-            </div>
-
-            <Downbar />
+          </div>
+         
+  
+          <div onClick={() => setOpen(!open)} className='text-3xl text-white absolute right-8 top-6 cursor-pointer md:hidden'>
+            <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
+          </div>
+  
+          <ul className={` text-white md:flex gap-3 md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto z-[-1] left-0 w-3/4 md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? '  top-20 ' : 'top-[-490px]  '}`}>
+  
+  
+           
+            <li className="sm:hidden  md:block  rounded-lg px-4 py-2  bg-red-600 hover:bg-red-700 ">
+              <Link to="/">DOWNLOAD APP</Link>
+            </li>
+         
+            <Nav>
+            {userInfo ? (
+              <>
+  
+                <NavDropdown
+                  title={`${userInfo.name}`}
+                  id="collasible-nav-dropdown"
+                >
+                  <NavDropdown.Item href="/profile">
+                    {/* <img
+                        alt=""
+                        src={`${userInfo.pic}`}
+                        width="25"
+                        height="25"
+                        style={{ marginRight: 10 }}
+                      /> */}
+                    My Profile
+                  </NavDropdown.Item>
+  
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item onClick={logoutHandler}>
+                    Logout
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </>
+            ) : (
+              <div className="  sm:hidden  md:block  rounded-lg px-4 py-2    bg-red-600 hover:bg-red-700 ">   <Nav.Link href="/login">Login</Nav.Link></div>
+            )}
+          </Nav>
+  
+          </ul>
+         
+         
         </div>
+        <Downbar />
+      </div>
+  
+  
+  
+ 
 
     )
 }

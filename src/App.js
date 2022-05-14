@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import {Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer";
@@ -24,12 +25,12 @@ import Theatreedit from './admin/Theatreedit';
 import Movieedit from './admin/Movieedit';
 import Login from './Pages/Login';
 import Registerpage from './Pages/Registerpage';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      
         <Navbar />
         <Routes>
           <Route index element={<Login />} />
@@ -66,7 +67,7 @@ function App() {
           />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      
     </>
   );
 }
