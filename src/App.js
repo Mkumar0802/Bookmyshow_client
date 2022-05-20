@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { loadProgressBar } from 'axios-progress-bar'
+import 'axios-progress-bar/dist/nprogress.css'
 import {Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from "./components/Navbar"
@@ -25,6 +26,8 @@ import Theatreedit from './admin/Theatreedit';
 import Movieedit from './admin/Movieedit';
 import Login from './Pages/Login';
 import Registerpage from './Pages/Registerpage';
+
+loadProgressBar()
 
 
 function App() {
