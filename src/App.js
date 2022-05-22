@@ -26,17 +26,20 @@ import Theatreedit from './admin/Theatreedit';
 import Movieedit from './admin/Movieedit';
 import Login from './Pages/Login';
 import Registerpage from './Pages/Registerpage';
+import { useSelector } from "react-redux";
 
 loadProgressBar()
 
 
 function App() {
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
   return (
     <>
       
         <Navbar />
         <Routes>
-          <Route index element={<Login />} />
+          <Route index element={<Home />} />
           {/* <Route path="/" element={<App />} /> */}
           <Route path="movies" element={<Movies />} />
           {/* <Route path="stream" element={<Stream />} /> */}
@@ -45,7 +48,7 @@ function App() {
           <Route path="sports" element={<Sports />} /> */}
           <Route path="home" element={<Home />} />
           <Route path="Coporate" element={<Coporate />} />
-          <Route path="book" element={<Theatres />} />
+          <Route path="book" element={userInfo ? <Theatres /> :<Login/>  } />
           <Route path="seats" element={<Seats />} />
           <Route path="confiramtion" element={<Bookdetails />} />
           <Route path="payment" element={<Payment />} />
