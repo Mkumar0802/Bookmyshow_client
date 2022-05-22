@@ -1,5 +1,4 @@
 import React from "react";
-import { Nav, NavDropdown } from "react-bootstrap";
 import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import Downbar from "./Downbar";
@@ -60,37 +59,51 @@ function Navbar() {
               <Link to="/">DOWNLOAD APP</Link>
             </li>
          
-            <Nav>
-            {userInfo ? (
-              <>
-  
-                <NavDropdown
-                  title={`${userInfo.name}`}
-                  id="collasible-nav-dropdown"
-                >
-                  <NavDropdown.Item href="/profile">
-                    {/* <img
-                        alt=""
-                        src={`${userInfo.pic}`}
-                        width="25"
-                        height="25"
-                        style={{ marginRight: 10 }}
-                      /> */}
-                    My Profile
-                  </NavDropdown.Item>
-  
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item onClick={logoutHandler}>
-                    Logout
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </>
-            ) : (
-              <div className="  sm:hidden  md:block  rounded-lg px-4 py-2    bg-red-600 hover:bg-red-700 ">   <Nav.Link href="/login">Login</Nav.Link></div>
-            )}
-          </Nav>
-  
-          </ul>
+            {
+                            userInfo ? (
+                                <ul className="flex flex-row  justify-end  space-x-9  ">
+
+                                    {/* <li>   <Link className="link" to="/settings">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd" />
+                                        </svg>
+                                    </Link></li> */}
+
+
+                                    
+                                    <li className="rounded-full px-4 py-2  bg-red-600  hover:bg-red-700   flex  text-justify hover:ring-4 ring-white transition ease-in-out duration-100" onClick={logoutHandler}>
+                                {userInfo && "LOGOUT"}
+                            </li>
+
+                            <li className='p-2 text-xl text-justify rounded-lg  hover:ring-4 ring-red-600 transition ease-in-out duration-100'>
+                                      Welcome {userInfo.name}
+                                    </li>
+                                </ul>
+
+
+
+
+                            ) : (
+                                <ul className="flex flex-row  justify-center  space-x-9">
+                                    <li className="rounded-lg px-4 py-2  bg-red-600  hover:bg-red-700   flex  text-justify hover:ring-4 ring-white transition ease-in-out duration-100">
+                                        <Link to="/login">
+                                            LOGIN
+                                        </Link> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                                        </svg>
+                                    </li >
+                                    <li className="rounded-full px-4 py-2  bg-red-600  hover:bg-red-700   flex  text-justify hover:ring-4 ring-white transition ease-in-out duration-100">
+                                        <Link to="/register">
+                                            REGISTER
+                                        </Link> <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z" />
+                                        </svg>
+                                    </li>
+
+                                </ul>
+                            )
+                        }
+                    </ul>
          
          
         </div>

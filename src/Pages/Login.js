@@ -1,9 +1,5 @@
-
+import { ToastContainer, toast } from 'react-toastify';
 import React from 'react';
-
-
-
-
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import Loading from "../utilltes/Loading";
@@ -24,6 +20,7 @@ function Login() {
 
   useEffect(() => {
     if (userInfo) {
+      toast.success(`welcome ${userInfo.name}`);
       navigate('/home')
     }
   }, [navigate, userInfo]);
@@ -38,6 +35,7 @@ function Login() {
 
   return (
     <div className=" ">
+      <ToastContainer />
       <div className="flex justify-center p-10  ">
         <h1 className="text-xl font-semibold animate-rubberBand">Login</h1>
 
